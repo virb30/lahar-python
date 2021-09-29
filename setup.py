@@ -5,13 +5,13 @@ import os
 
 README = os.path.join(os.path.dirname(__file__), 'README.md')
 
-setup()
-
 setup(name='lahar-python',
       version='0.1.0',
       description='LAHAR API integration wrapper for python',
       long_description=open(README).read(),
-      author="Vinícius Bôscoa", author_email="virb30@gmail.com",
+      long_description_content_type="text/markdown",
+      author="Vinícius Bôscoa",
+      author_email="virb30@gmail.com",
       license="MIT",
       py_modules=['lahar'],
       zip_safe=False,
@@ -20,6 +20,7 @@ setup(name='lahar-python',
       install_requires=[
           'requests'
       ],
+      python_requires=">=3.6",
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Intended Audience :: Developers',
@@ -30,4 +31,7 @@ setup(name='lahar-python',
           'Programming Language :: Python :: 3',
           'Topic :: Software Development :: Libraries',
       ],
+      project_urls={
+          'Bug Tracker': 'http://github.com/virb30/lahar-python/issues'
+      },
       url='http://github.com/virb30/lahar-python/',)
